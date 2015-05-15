@@ -6,8 +6,8 @@ input = gets
 candidates = {}
 
 file.each_line do |compare|
-  compare.strip!
-  input.strip!
+  compare = compare.strip.downcase
+  input = input.strip.downcase
   score = 0
 
   score += 5 if input == compare
